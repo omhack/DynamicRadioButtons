@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B81644211955FE63AF4B7B3AF653D2A8"
+               BlueprintIdentifier = "D42EA21D55FC5AA2449507F417B4D078"
                BuildableName = "Pods_DynamicRadioButtons.framework"
                BlueprintName = "Pods-DynamicRadioButtons"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B81644211955FE63AF4B7B3AF653D2A8"
+            BlueprintIdentifier = "D42EA21D55FC5AA2449507F417B4D078"
             BuildableName = "Pods_DynamicRadioButtons.framework"
             BlueprintName = "Pods-DynamicRadioButtons"
             ReferencedContainer = "container:Pods.xcodeproj">

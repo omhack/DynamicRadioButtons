@@ -13,6 +13,11 @@
 		A7C7DF8E210F554C004CC85A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C7DF8C210F554C004CC85A /* Main.storyboard */; };
 		A7C7DF90210F5550004CC85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7C7DF8F210F5550004CC85A /* Assets.xcassets */; };
 		A7C7DF93210F5550004CC85A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C7DF91210F5550004CC85A /* LaunchScreen.storyboard */; };
+		A7C7DF9C210F65D8004CC85A /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7DF9B210F65D8004CC85A /* Questions.swift */; };
+		A7C7DF9E210F6640004CC85A /* QuestionsDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7C7DF9D210F663F004CC85A /* QuestionsDialog.xib */; };
+		A7C7DFA0210F670F004CC85A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7DF9F210F670F004CC85A /* Question.swift */; };
+		A7C7DFA2210F671D004CC85A /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7DFA1210F671D004CC85A /* Poll.swift */; };
+		A7C7DFA4210F6D8D004CC85A /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C7DFA3210F6D8D004CC85A /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		A7C7DF8F210F5550004CC85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7C7DF92210F5550004CC85A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7C7DF94210F5550004CC85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7C7DF9B210F65D8004CC85A /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		A7C7DF9D210F663F004CC85A /* QuestionsDialog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionsDialog.xib; sourceTree = "<group>"; };
+		A7C7DF9F210F670F004CC85A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A7C7DFA1210F671D004CC85A /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		A7C7DFA3210F6D8D004CC85A /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,14 +79,27 @@
 		A7C7DF87210F554C004CC85A /* DynamicRadioButtons */ = {
 			isa = PBXGroup;
 			children = (
+				A7C7DF9A210F65C2004CC85A /* views */,
 				A7C7DF88210F554C004CC85A /* AppDelegate.swift */,
 				A7C7DF8A210F554C004CC85A /* ViewController.swift */,
 				A7C7DF8C210F554C004CC85A /* Main.storyboard */,
 				A7C7DF8F210F5550004CC85A /* Assets.xcassets */,
 				A7C7DF91210F5550004CC85A /* LaunchScreen.storyboard */,
 				A7C7DF94210F5550004CC85A /* Info.plist */,
+				A7C7DF9F210F670F004CC85A /* Question.swift */,
+				A7C7DFA1210F671D004CC85A /* Poll.swift */,
+				A7C7DFA3210F6D8D004CC85A /* Answer.swift */,
 			);
 			path = DynamicRadioButtons;
+			sourceTree = "<group>";
+		};
+		A7C7DF9A210F65C2004CC85A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A7C7DF9D210F663F004CC85A /* QuestionsDialog.xib */,
+				A7C7DF9B210F65D8004CC85A /* Questions.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		B5B53F66E0104057A43427CF /* Pods */ = {
@@ -151,6 +174,7 @@
 				A7C7DF93210F5550004CC85A /* LaunchScreen.storyboard in Resources */,
 				A7C7DF90210F5550004CC85A /* Assets.xcassets in Resources */,
 				A7C7DF8E210F554C004CC85A /* Main.storyboard in Resources */,
+				A7C7DF9E210F6640004CC85A /* QuestionsDialog.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,13 +206,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DynamicRadioButtons/Pods-DynamicRadioButtons-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LSDialogViewController/LSDialogViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LSDialogViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -202,6 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C7DFA2210F671D004CC85A /* Poll.swift in Sources */,
+				A7C7DF9C210F65D8004CC85A /* Questions.swift in Sources */,
+				A7C7DFA0210F670F004CC85A /* Question.swift in Sources */,
+				A7C7DFA4210F6D8D004CC85A /* Answer.swift in Sources */,
 				A7C7DF8B210F554C004CC85A /* ViewController.swift in Sources */,
 				A7C7DF89210F554C004CC85A /* AppDelegate.swift in Sources */,
 			);
