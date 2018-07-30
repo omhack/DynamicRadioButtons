@@ -1,0 +1,20 @@
+PODS:
+  - DLRadioButton (1.4.12)
+  - IQKeyboardManagerSwift (6.1.0)
+
+DEPENDENCIES:
+  - DLRadioButton (~> 1.4)
+  - IQKeyboardManagerSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DLRadioButton
+    - IQKeyboardManagerSwift
+
+SPEC CHECKSUMS:
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  IQKeyboardManagerSwift: f5004f5860d9a8ed23a7ef7a156ae168828eb018
+
+PODFILE CHECKSUM: 5ecd661fa4e68091516c4eb163b5b7d544a04999
+
+COCOAPODS: 1.5.3
